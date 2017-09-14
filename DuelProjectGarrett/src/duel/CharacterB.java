@@ -1,4 +1,4 @@
-package main;
+package duel;
 
 public class CharacterB {
 
