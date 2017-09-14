@@ -15,3 +15,4 @@ public interface Dueler {
 	//returns the value of HP, can be called as often as anyone wants
 	int getHP();
 }
+//uncomment
