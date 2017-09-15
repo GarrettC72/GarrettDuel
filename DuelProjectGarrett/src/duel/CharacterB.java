@@ -8,14 +8,13 @@ public class CharacterB implements Dueler {
 		
 	}
 	
-	public String getName() {
-		return "Douglass";
-	}
-	
 	public void taunt() {
 		System.out.println("Come at me, bro! Git Good");
 	}
-	
+	public String getName() {
+		return "The Real Frederick";
+	}
+
 	public void setStartingHP(int hp) {
 		this.hp = hp;
 	}
@@ -25,7 +24,14 @@ public class CharacterB implements Dueler {
 	}
 	
 	public boolean determineIfOpponentIsFair(Dueler d, int hp) {
-		
+		return 
 	}
 	
+	public int getAction(Object caller) {
+		return int
+	}
+	
+	public void hit(Object caller) {
+		
+	}
 }
