@@ -186,5 +186,4 @@ public class Duel {
 			e.printStackTrace();
 		}
 	}
-
 }
