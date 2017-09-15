@@ -1,8 +1,26 @@
 package duel;
 
-public class CharacterA {
+public class CharacterA implements Dueler {
 	
-	public static void main(String[] args) {
+	private int hp;
+	
+	public CharacterA() {
 		
+	}
+	
+	public String getName() {
+		return "Frederick";
+	}
+	
+	public void taunt() {
+		System.out.println("Come at me, bro! Git Good");
+	}
+	
+	public void setStartingHP(int hp) {
+		this.hp = hp;
+	}
+	
+	public int getHP() {
+		return hp;
 	}
 }
