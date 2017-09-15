@@ -1,7 +1,5 @@
 package duel;
 
-//period 4
-
 
 public class Duel {
 
