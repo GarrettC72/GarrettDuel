@@ -162,9 +162,6 @@ public class Duel {
 		}
 	}
 	
-	
-	
-	
 	public boolean isFair(boolean correctlyDoneD1, boolean correctlyDoneD2){
 		if (!correctlyDoneD1 && correctlyDoneD2){
 			System.out.println(d1.getName() + " is cheating. " + d2.getName() + " wins");
