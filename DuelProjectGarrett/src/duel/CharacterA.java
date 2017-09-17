@@ -26,13 +26,13 @@ public class CharacterA implements Dueler{
 	}
 	
 	public boolean determineIfOpponentIsFair(Dueler d, int hp) {
-		return d.getHP()==hp;
+		return d.getHP() == hp;
 	}
 	
 	public int getAction(Object caller) {
-		
+		return (int)(Math.random() * 4);
 	}
-	
+
 	public void hit(Object caller) {
 		if (caller instanceof Duel) {
 			this.hp = this.hp - 10;
