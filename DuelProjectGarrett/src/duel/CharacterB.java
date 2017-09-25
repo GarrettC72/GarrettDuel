@@ -4,7 +4,7 @@ public class CharacterB implements Dueler {
 	
 	private int hp;
 	private boolean loaded;
-	private boolean round = true;
+	private boolean round = false;
 	
 	public CharacterB() {
 		
@@ -33,28 +33,27 @@ public class CharacterB implements Dueler {
 		if (!(caller instanceof Duel)) {
 			return 3;
 		}
-			else { 
-				if (!round){
-					round = true;
-					loaded = true;
-					return 0;
+		else {
+			if (!round) {
+				round = true;
+				loaded = true;
+				return 0;
+			}
+			else if (loaded) {
+				if (Math.random() < 0.5) {
+					loaded = false;
+					return 1;
 				}
-					if(loaded) {
-						if(Math.random()< 0.5)
-						{
-							loaded = false;
-							return 1;
-						}
-						return 2;
-					}
+				return 2;
+			}
 			else {
-				if (Math.random()< 0.5) {
+				if (Math.random() < 0.5) {
 					loaded = true;
 					return 0;
 				}
 				return 2;
 			}
-		}	
+		}
 	}
 	
 	public void hit(Object caller) {
