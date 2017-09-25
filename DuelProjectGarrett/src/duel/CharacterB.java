@@ -3,7 +3,8 @@ package duel;
 public class CharacterB implements Dueler {
 	
 	private int hp;
-	private boolean 
+	private boolean loaded;
+	private boolean round = true;
 	
 	public CharacterB() {
 		
@@ -29,10 +30,31 @@ public class CharacterB implements Dueler {
 	}
 	
 	public int getAction(Object caller) {
-		if (caller instanceof Duel) {
-			return (int)(Math.random() * 3);
+		if (!(caller instanceof Duel)) {
+			return 3;
 		}
-		else return 3;
+			else { 
+				if (!round){
+					round = true;
+					loaded = true;
+					return 0;
+				}
+					if(loaded) {
+						if(Math.random()< 0.5)
+						{
+							loaded = false;
+							return 1;
+						}
+						return 2;
+					}
+			else {
+				if (Math.random()< 0.5) {
+					loaded = true;
+					return 0;
+				}
+				return 2;
+			}
+		}	
 	}
 	
 	public void hit(Object caller) {
