@@ -12,7 +12,7 @@ public class CharacterB implements Dueler {
 		System.out.println("Come at me, bro! Git Good");
 	}
 	public String getName() {
-		return "The Real Frederick";
+		return "Douglass";
 	}
 
 	public void setStartingHP(int hp) {
